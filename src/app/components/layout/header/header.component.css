@@ -1,0 +1,19 @@
+.header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+    width: 100% ;
+  }
+
+  a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  h1 {
+    font-family:  sans-serif;
+    padding: 10px;
+    font-size: 35px;
+    cursor: pointer;
+  }

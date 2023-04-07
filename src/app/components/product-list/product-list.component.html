@@ -1,0 +1,10 @@
+<div class="product-container">
+   <div  *ngFor="let product of products">
+      <div *ngIf="!loading">
+         <app-product-item [data]="product" (item)="addToCart($event)"> </app-product-item>
+      </div>
+   </div>   
+   <div class="text-center w-100" *ngIf="loading">
+      <app-spinner></app-spinner>
+  </div>
+</div>

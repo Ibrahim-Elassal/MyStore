@@ -1,0 +1,45 @@
+img {
+    border-radius: 10px;
+  }
+
+  .select-input {
+    width: 108px;
+    margin-bottom: 8px;
+  }
+
+  .detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+  }
+  .back-link {
+    margin-top: 8px;
+  }
+  .detail-item h4 {
+    font-weight: 600;
+    font-size: 35px;
+  }
+  .detail-item span {
+    font-weight: 600;
+  }
+  .detail-item p {
+    font-size: 22px;
+  }
+
+  .select-input {
+    width: 108px;
+    margin: 10px 0px 7px ;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+  }
+  .detail-item button.add {
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+  }
+  .detail-item .back {
+    color:#0a58ca ;
+  }

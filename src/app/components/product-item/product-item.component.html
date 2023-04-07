@@ -1,0 +1,11 @@
+<div>
+    <div class="content">
+        <img class="product-image" src="{{data.url}}" alt=""  routerLink="/productdetails/{{data.id}}">
+        <div class="body">
+            <h4>Name: {{data.name}}</h4>
+           <span>Price:  {{data.price}}</span> <br>
+           <input type="number" class="select-input" [ngModel]="amount" (ngModelChange)="getQuantity($event)" > <br>
+           <button class="btn btn-primary" (click)="add()">Add to cart</button>
+        </div>
+    </div>
+</div>

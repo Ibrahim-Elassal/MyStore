@@ -1,0 +1,32 @@
+<div class="container " *ngFor="let item of productDetails">
+  <div class="row align-items-md-center mt-5  "*ngIf="!loading" >
+    <div class="col-md-5">
+      <div class="img text-center">
+        <img class="product-image w-75" src="{{item.url}}" alt="">
+      </div>
+    </div>
+    <div class="col-md-5  text-md-center ">
+      <div class="detail-item text-center">
+        <h4 class="my-3"> {{item.name}}</h4>
+        <span>Price: {{item.price}}</span> <br>
+        <p class="my-3">Description: {{item.description}}</p>
+        <input type="number" class="select-input w-75 text-center"  [ngModel]="amount" (ngModelChange)="getQuantity($event)" > <br>
+        <button class="btn btn-primary add w-75 my-3"  (click)="addToCart(item)">Add to cart</button> <br>
+        <button class=" btn back" routerLink = "/productList"> <i class="fa-regular fa-arrow-left-long"></i> Back to product list</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="text-center w-100" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<!-- <div class="col-md-4 " >
+  <div >
+    <div class="detail-container" >
+
+
+  </div>
+  </div>
+</div> -->

@@ -1,0 +1,35 @@
+  .content {
+    margin: 0rem 3rem 4rem 5rem ;
+  }
+  .product-image {      
+    list-style-type: none;
+    width: 290px;
+    padding: 20px;
+    margin: 6px 6px;        
+    border: 1px solid #33B5E5;
+    cursor: pointer;
+  } 
+  
+  .body {
+    text-align: center;
+  }
+  h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .body span {
+    font-weight: bold;
+  }
+  .select-input {
+    width: 108px; 
+    margin: 10px 0px 7px ;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+  }
+  button {
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+  }

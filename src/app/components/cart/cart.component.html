@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row my-5 py-5">
+    <div class="col-md-6 text-center">
+      <div class="row" *ngFor="let item of cartProducts; let index =index">
+
+            <div class="empty-cart-message col-md-6 my-4 ">
+                <img class="product-image w-75" src="{{item.item.url}}" alt="">
+            </div>
+            <div class="cart-item-details col-md-6 translate-">
+                <h4>{{item.item.name}}</h4>
+                <span> Price: ${{item.item.price}}</span> <br>
+            <div class="" >
+                <button class="btn border border-primary fw-bold " (click) = "addAmount(index)">+</button>
+                <input type="number" class="number-input  border-primary " (input)="detectChange()" id="amount" [(ngModel)] = "item.quantity" min="1">
+                <button class="btn border border-primary fw-bold" (click) = "minusAmount(index)">-</button>  <br>
+                <button class="btn btn-dark w-75 my-3" (click)="deleteCart(index)">Delete</button> <br>
+                 <span>Total: ${{item.item.price * item.quantity}} </span>
+            </div>
+            </div>
+
+    </div>
+    <button  class="btn btn-dark w-75 mb-3 " (click)="deleteAllCarts()">Clear Shooping Cart</button>
+    <h2 >Total : {{total | number }}</h2>
+    </div>
+
+    <div class="col-md-6">
+      <div class="cart-item-details mt-md-0 mt-5" >
+        <form class="form-margin"  [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+            <label for="name" class="form-margin">Full Name</label><br>
+            <input  type="text" id="name" min="3"  placeholder="(minimum 3 characters)" class="form-margin"  formControlName="name" [ngModel]="fullName"  (ngModelChange)="getFullName($event)"> <br>
+            <small class=" error" *ngIf=" loginForm.controls['name'].hasError('required') && loginForm.controls['name'].touched"> Name is required </small> <br>
+
+            <label for="address" class="form-margin"> Address</label> <br>
+            <input type="text" id="address" min="6"  placeholder="   (minimum 6 characters)" class="form-margin"  formControlName="address"> <br>
+            <small class=" error" *ngIf=" loginForm.controls['address'].hasError('required') && loginForm.controls['address'].touched"> Address is required </small> <br>
+
+            <label for="credit" class="form-margin"> Credit card number </label> <br>
+            <input  type="text" id="credit"  min="16" max="16"  placeholder="   (16-digit number)" class="form-margin" formControlName="credit">  <br>
+            <p class=" error" *ngIf=" loginForm.controls['credit'].hasError('required') && loginForm.controls['credit'].touched">  Credit card number is required </p>
+            <p class="error" *ngIf=" loginForm.controls['credit'].hasError('minlength')  && loginForm.controls['credit'].touched">Only 16-digit number  </p>
+            <p class="error" *ngIf="loginForm.controls['credit'].hasError('maxLength')  && loginForm.controls['credit'].touched">Only 16-digit number  </p>
+            <p class=" error" *ngIf=" loginForm.controls['credit'].hasError('pattern') && loginForm.controls['credit'].touched"> Only number should be allowed here</p>
+
+            <span class="form-margin">We 'll never share Your payment details with another one .</span> <br>
+            <button class="btn btn-primary"  [disabled]="!loginForm.valid"  routerLink = "/confirmOrder" type="button" (click)="onSubmit(loginForm)">Submit</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
