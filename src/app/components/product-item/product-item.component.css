@@ -1,15 +1,15 @@
   .content {
     margin: 0rem 3rem 4rem 5rem ;
   }
-  .product-image {      
+  .product-image {
     list-style-type: none;
     width: 290px;
     padding: 20px;
-    margin: 6px 6px;        
+    margin: 6px 6px;
     border: 1px solid #33B5E5;
     cursor: pointer;
-  } 
-  
+  }
+
   .body {
     text-align: center;
   }
@@ -21,7 +21,7 @@
     font-weight: bold;
   }
   .select-input {
-    width: 108px; 
+    width: 108px;
     margin: 10px 0px 7px ;
     padding: 7px;
     border-radius: 5px;
